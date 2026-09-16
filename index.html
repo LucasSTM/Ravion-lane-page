@@ -41,6 +41,7 @@
         <!-- End Search -->
       </div>
       <div id="slider">
+        <!-- Start Slider -->
         <div class="text-content">
           <h2 class="heading">Ravion</h2>
           <p class="description">Beyond the Known</p>
@@ -158,6 +159,45 @@
 
       <div id="footer"></div>
     </div>
-    <!-- Start Slider -->
+
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-close">
+          <i class="ti-close"></i>
+        </div>
+
+        <header class="modal-header">
+          <i class="modal-heading ti-bag"></i>Tickets
+        </header>
+
+        <div class="modal-body">
+          <label for="quantity" class="modal-label">
+            <i class="ti-shopping-cart"></i>Tickets, $15 per person
+          </label>
+          <input
+            type="text"
+            class="modal-input"
+            placeholder="How many?"
+            id="quantity"
+          />
+
+          <label for="modal-email" class="modal-label">
+            <i class="ti-user"></i>Send to Email
+          </label>
+          <input
+            type="email"
+            class="modal-input"
+            placeholder="enter email"
+            id="modal-email"
+          />
+
+          <button id="buy-ticket">Pay <i class="ti-check"></i></button>
+        </div>
+
+        <footer class="modal-footer">
+          <p class="modal-help">Need <a href="">help?</a></p>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
