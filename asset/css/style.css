@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+từ ngoài vào trong
+từ trên xuống dưới
+Tổng quan đến chi tiết
+*/
+/* 
+1. location
+2. Size
+3. Color
+4. Kiểu dáng
+  */
+
+.clear {
+  clear: both; /* clear float */
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+#main {
+}
+
+#header {
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#header .search-button {
+  float: right;
+  line-height: 50px;
+  padding: 0 22px;
+}
+
+#header .search-button:hover {
+  background-color: #f44336;
+  cursor: pointer; /* biến trỏ chuột */
+}
+
+#header .search-icon {
+  color: #fff;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav,
+.subnav {
+  list-style-type: none;
+}
+
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 50px;
+  padding: 0px 24px;
+  display: block;
+  /* position: relative; */
+}
+
+#nav .subnav li:hover,
+#nav > li:hover > a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  min-width: 160px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+  color: #000;
+  padding: 0 10px;
+  line-height: 38px;
+}
+#nav .dropdown {
+  font-size: 10px;
+}
+
+#slider {
+  margin-top: 50px;
+  /* background-color: #333; */
+  padding-top: 45%;
+  background: url(../img/cover.png) top center / cover no-repeat;
+  position: relative;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 0;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  width: 100%;
+  /* right: 0;
+  left: 0; */
+  text-align: center;
+}
+
+#slider .heading {
+  font-weight: 550;
+  font-size: 25px;
+}
+#slider .description {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+#content {
+  /* height: 1000px; */
+  background-color: #ccc;
+}
+
+#content .content-section {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 16px;
+}
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+#content .section-subheading {
+  font-size: 16px;
+  font-style: italic;
+  opacity: 50%;
+}
+
+#content .about-text {
+  margin: 15px;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+#content .section-heading,
+#content .section-subheading {
+  text-align: center;
+}
+
+#content .member-list {
+  margin-top: 48px;
+  /* container căng ra chứa float */
+  /* overflow: hidden;  */
+}
+
+#content .member-item {
+  float: left;
+  width: 33.333333%;
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 6px;
+}
+
+/* Product Section */
+.product-section {
+  background-color: #000;
+}
+.ticket-list {
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.ticket-list .sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.ticket-list .remaining {
+  float: right;
+  width: 28px;
+  height: 25px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  margin-top: -2px;
+}
+
+.ticket-list li {
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  padding: 7px 18px;
+  color: #757575;
+}
+
+/* Product */
+.product-list {
+  margin-top: 32px;
+}
+.product-item {
+  float: left;
+  width: 33, 333333%;
+}
+.product-img {
+}
+.product-body {
+}
+.product-heading {
+}
+.product-time {
+}
+.product-desc {
+}
+.product-more-btn {
+}
+
+#footer {
+}
