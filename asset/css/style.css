@@ -239,22 +239,54 @@ Tổng quan đến chi tiết
 /* Product */
 .product-list {
   margin-top: 32px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-bottom: 32px;
 }
-.product-item {
+.place-item {
   float: left;
-  width: 33, 333333%;
+  width: 33.33333%;
+  padding: 0 8px;
 }
-.product-img {
+
+.place-img {
+  width: 100%;
+  display: block;
 }
-.product-body {
+
+.place-img:hover {
+  opacity: 0.6;
 }
-.product-heading {
+.place-body {
+  font-size: 15px;
+  background-color: #fff;
+  padding: 16px;
 }
-.product-time {
+
+.place-heading {
+  font-size: 15px;
+  font-weight: 550;
 }
-.product-desc {
+.place-day {
+  margin-top: 15px;
+  opacity: 0.5;
 }
-.product-more-btn {
+.place-desc {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.place-buy-btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 7px 18px;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
 }
 
 #footer {
