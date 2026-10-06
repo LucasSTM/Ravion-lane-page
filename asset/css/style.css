@@ -18,12 +18,31 @@ Tổng quan đến chi tiết
 4. Kiểu dáng
   */
 
+/* common */
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half {
+  width: 33.33333%;
+}
+
 .clear {
   clear: both; /* clear float */
 }
 
 .text-white {
   color: #fff !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 #main {
@@ -185,12 +204,6 @@ Tổng quan đến chi tiết
   /* overflow: hidden;  */
 }
 
-#content .member-item {
-  float: left;
-  width: 33.333333%;
-  text-align: center;
-}
-
 #content .member-name {
   font-size: 15px;
 }
@@ -239,43 +252,36 @@ Tổng quan đến chi tiết
 /* Product */
 .product-list {
   margin-top: 32px;
-  margin-left: -8px;
-  margin-right: -8px;
   padding-bottom: 32px;
 }
-.place-item {
-  float: left;
-  width: 33.33333%;
-  padding: 0 8px;
-}
 
-.place-img {
+.product-img {
   width: 100%;
   display: block;
 }
 
-.place-img:hover {
+.product-img:hover {
   opacity: 0.6;
 }
-.place-body {
+.product-body {
   font-size: 15px;
   background-color: #fff;
   padding: 16px;
 }
 
-.place-heading {
+.product-heading {
   font-size: 15px;
   font-weight: 550;
 }
-.place-day {
+.product-day {
   margin-top: 15px;
   opacity: 0.5;
 }
-.place-desc {
+.product-desc {
   margin-top: 15px;
   line-height: 1.5;
 }
-.place-more-btn {
+.product-more-btn {
   color: #fff;
   background-color: #000;
   text-decoration: none;
@@ -284,7 +290,7 @@ Tổng quan đến chi tiết
   margin-top: 12px;
 }
 
-.place-more-btn:hover {
+.product-more-btn:hover {
   color: #000;
   background-color: #ccc;
 }
