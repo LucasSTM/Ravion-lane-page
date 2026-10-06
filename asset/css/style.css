@@ -275,7 +275,7 @@ Tổng quan đến chi tiết
   margin-top: 15px;
   line-height: 1.5;
 }
-.place-buy-btn {
+.place-more-btn {
   color: #fff;
   background-color: #000;
   text-decoration: none;
@@ -284,7 +284,7 @@ Tổng quan đến chi tiết
   margin-top: 12px;
 }
 
-.place-buy-btn:hover {
+.place-more-btn:hover {
   color: #000;
   background-color: #ccc;
 }
@@ -314,6 +314,7 @@ Tổng quan đến chi tiết
   max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
+  animation: modalfadein ease 1s;
 }
 
 .modal-close {
@@ -384,4 +385,17 @@ Tổng quan đến chi tiết
 
 .modal-footer a {
   color: #2196f3;
+}
+
+/* Keyframe */
+
+@keyframes modalfadein {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

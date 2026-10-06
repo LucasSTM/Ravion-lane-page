@@ -111,7 +111,7 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">More</a>
+                  <button class="place-more-btn js-more">More</button>
                 </div>
               </div>
 
@@ -127,7 +127,7 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">More</a>
+                  <button class="place-more-btn js-more">More</button>
                 </div>
               </div>
 
@@ -143,7 +143,7 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">More</a>
+                  <button class="place-more-btn js-more">More</button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -160,9 +160,9 @@
       <div id="footer"></div>
     </div>
 
-    <div class="modal">
-      <div class="modal-container">
-        <div class="modal-close">
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
           <i class="ti-close"></i>
         </div>
 
@@ -199,5 +199,37 @@
         </footer>
       </div>
     </div>
+
+    <script>
+      const moreBtns = document.querySelectorAll(".js-more");
+      const modal = document.querySelector(".js-modal");
+      const modalClose = document.querySelector(".js-modal-close");
+      const modalContainer = document.querySelector(".js-modal-container");
+
+      // Hàm thêm class open modal
+      function showMoreBtns() {
+        modal.classList.add("open");
+      }
+
+      // Hàm xóa class opem modal
+      function hideMoreBtns() {
+        modal.classList.remove("open");
+      }
+
+      function Container(event) {
+        event.stopPropagation();
+      }
+
+      // Loop button and listen click
+      for (const moreBtn of moreBtns) {
+        moreBtn.addEventListener("click", showMoreBtns);
+      }
+      //Listen click button close
+      modalClose.addEventListener("click", hideMoreBtns);
+
+      modal.addEventListener("click", hideMoreBtns);
+
+      modalContainer.addEventListener("click", Container);
+    </script>
   </body>
 </html>
