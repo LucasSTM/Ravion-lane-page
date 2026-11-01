@@ -173,7 +173,7 @@
             <p class="s-mt-8">
                 <i class="ti-youtube"></i>
               <a href="https://www.youtube.com/@lucasstrowman"
-                >Lucas Strowman</
+                >Lucas Strowman</a
               >
             </p>
             <p><i class="ti-email s-mt-8"></i>Creatorlucass@gmail.com</p>
@@ -333,9 +333,6 @@
       
       for (var i = 0; i < menuItems.length; i++){
         var menuItem = menuItems[i];
-        
-
-        console.log(menuItem.nextElementSibling);
 
         menuItem.onclick = function () {
           var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
