@@ -4,7 +4,19 @@
   box-sizing: border-box;
 }
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  scroll-behavior: smooth;
 }
 /* 
 từ ngoài vào trong
@@ -19,12 +31,33 @@ Tổng quan đến chi tiết
   */
 
 /* common */
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 7px 18px;
+  display: inline-block;
+  margin-top: 12px;
+  /* border: none; */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
 
 .mt-8 {
   margin-top: 8px !important;
 }
 .mt-16 {
   margin-top: 16px !important;
+}
+
+.mt-32 {
+  margin-top: 32px !important;
 }
 
 .row {
@@ -48,6 +81,10 @@ Tổng quan đến chi tiết
   width: 33.33333%;
 }
 
+.col-center {
+  width: 100%;
+}
+
 .col-half {
   width: 50%;
 }
@@ -68,7 +105,12 @@ Tổng quan đến chi tiết
   text-align: center !important;
 }
 
+.pull-right {
+  float: right !important;
+}
+
 #main {
+  overflow: hidden;
 }
 
 #header {
@@ -79,20 +121,34 @@ Tổng quan đến chi tiết
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
+  /* overflow: hidden; */
 }
 
+#header .mobile-menu {
+  display: none;
+}
+
+#header .mobile-menu,
 #header .search-button {
   float: right;
   line-height: 50px;
   padding: 0 22px;
 }
 
+#header .mobile-menu:hover {
+  background-color: #fff;
+}
+
+#header .mobile-menu:hover .menu-icon {
+  color: #000;
+}
+
 #header .search-button:hover {
   background-color: #f44336;
   cursor: pointer; /* biến trỏ chuột */
 }
-
+#header .menu-icon,
 #header .search-icon {
   color: #fff;
 }
@@ -156,11 +212,19 @@ Tổng quan đến chi tiết
   font-size: 10px;
 }
 
+#slider .slider-img {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 #slider {
-  margin-top: 50px;
+  /* margin-top: 40px; */
   /* background-color: #333; */
-  padding-top: 45%;
-  background: url(../img/cover.png) top center / cover no-repeat;
+  /* background: url(../img/cover.png) top center / cover no-repeat; */
+  /* padding-top: 50%; */
+  width: 100%;
+  height: 100vh;
   position: relative;
 }
 
@@ -172,28 +236,37 @@ Tổng quan đến chi tiết
   width: 100%;
   /* right: 0;
   left: 0; */
+  /* padding-bottom: 0%; */
   text-align: center;
+  z-index: 1;
 }
 
 #slider .heading {
   font-weight: 550;
   font-size: 25px;
+  text-align: center;
 }
 #slider .description {
-  margin-top: 25px;
+  margin-top: 10px;
   font-size: 15px;
+  text-shadow: 0 0 2px #fff;
+  margin-bottom: 10px;
 }
 
 #content {
   /* height: 1000px; */
-  background-color: #ccc;
+  background-color: #e3e3e3;
 }
 
 #content .content-section {
   width: 800px;
+  max-width: 100%;
+  /* height: 100vh; */
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 16px;
+  padding: 50px 16px 50px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #content .section-heading {
   font-size: 30px;
@@ -214,17 +287,26 @@ Tổng quan đến chi tiết
   font-size: 15px;
   text-align: justify;
   line-height: 1.7;
+  text-align: justify;
 }
 
-#content .section-heading,
-#content .section-subheading {
+#content .section-heading {
   text-align: center;
 }
 
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 16px;
   /* container căng ra chứa float */
   /* overflow: hidden;  */
+}
+
+#content .mem1,
+#content .mem3 {
+  display: none;
+}
+
+#content .mem2 {
+  justify-content: center;
 }
 
 #content .member-name {
@@ -235,6 +317,7 @@ Tổng quan đến chi tiết
   margin-top: 15px;
   width: 154px;
   border-radius: 6px;
+  /* display: inline; */
 }
 
 /* Product Section */
@@ -246,7 +329,7 @@ Tổng quan đến chi tiết
   margin-top: 40px;
 }
 
-.ticket-list .sold-out {
+.ticket-list .coming-soon {
   background-color: #f44336;
   color: #fff;
   padding: 3px 4px;
@@ -275,7 +358,6 @@ Tổng quan đến chi tiết
 /* Product */
 .product-list {
   margin-top: 32px;
-  padding-bottom: 32px;
 }
 
 .product-img {
@@ -304,21 +386,27 @@ Tổng quan đến chi tiết
   margin-top: 15px;
   line-height: 1.5;
 }
-.product-more-btn {
-  color: #fff;
-  background-color: #000;
-  text-decoration: none;
-  padding: 7px 18px;
-  display: inline-block;
-  margin-top: 12px;
-}
-
-.product-more-btn:hover {
-  color: #000;
-  background-color: #ccc;
-}
 
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .social-list {
+  font-size: 24px;
+}
+
+#footer .social-list a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+#footer .social-list a:hover {
+  opacity: 0.4;
+}
+
+#footer .coppyright {
+  margin-top: 15px;
 }
 
 .modal {
@@ -384,15 +472,15 @@ Tổng quan đến chi tiết
   margin-bottom: 10px;
 }
 
-.modal-input {
+/* .modal-input {
   border: 1px solid #ccc;
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 24px;
-}
+} */
 
-#buy-ticket {
+#ok-btn {
   background-color: #009688;
   border: none;
   color: #fff;
@@ -402,7 +490,7 @@ Tổng quan đến chi tiết
   padding: 10px;
 }
 
-#buy-ticket:hover {
+#ok-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -426,6 +514,11 @@ Tổng quan đến chi tiết
   line-height: 1.4;
 }
 
+.contact-info a {
+  text-decoration: none;
+  color: #00f;
+}
+
 .contact-info i[class*="ti-"] {
   width: 30px;
   display: inline-block;
@@ -439,15 +532,6 @@ Tổng quan đến chi tiết
   padding: 11px;
   border: 1px solid #ccc;
   width: 100%;
-}
-
-.contact-form .form-submit-btn {
-  font-size: 15px;
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #000;
-  padding: 10px 16px;
-  float: right;
 }
 
 /* Keyframe */

@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Band</title>
+    <title>Ravion</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./asset/img/Favicon/Ravion-favicon.png"
+    />
+    <!-- CSS -->
+    <!-- PC -->
     <link rel="stylesheet" href="./asset/css/style.css" />
-    <!-- <link rel="stylesheet" href="reset.css" /> -->
+    <!-- <link rel="stylesheet" href="./asset/css/reset.css" /> -->
+    <link rel="stylesheet" href="./asset/css/responsive.css">
+
+    <!--[if lt IE 11]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <link
       rel="stylesheet"
       href="./asset/font/themify-icons/themify-icons.css"
@@ -16,20 +28,20 @@
       <div id="header">
         <!-- Start NAV -->
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li>
-            <a href=""
+            <a href="#"
               >More
               <i class="ti-angle-down dropdown"></i>
             </a>
             <ul class="subnav">
-              <li><a href="">Merchandise</a></li>
-              <li><a href="">Update version</a></li>
-              <li><a href="">Features</a></li>
-            </ul>
+              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Update version</a></li>
+              <li><a href="#">Features</a></li>
+            </ul>            
           </li>
         </ul>
         <!-- END NAV -->
@@ -38,150 +50,192 @@
         <div class="search-button">
           <i class="ti-search search-icon"></i>
         </div>
+
+        <div id="mobile-menus" class="mobile-menu"><i class="menu-icon ti-menu"></i></div>
         <!-- End Search -->
       </div>
       <div id="slider">
-        <!-- Start Slider -->
+        <img src="./asset/img/cover.png" alt="Ravion_cover" class="slider-img">
+      <!-- Start Slider -->
         <div class="text-content">
           <h2 class="heading">Ravion</h2>
           <p class="description">Beyond the Known</p>
         </div>
       </div>
-      <!-- End slider -->
-      <div id="content">
-        <!-- About -->
+    <!-- End slider -->
+    <div id="content">
+      <!-- About -->
+      <div id="about" class="content-section">
+        <h2 class="section-heading">About US</h2>
+        <p class="section-subheading about-text">
+          Ravion was created from a simple idea: to build something beyond the
+          ordinary. A world where adventure, challenge, and discovery never truly
+          end.
+        </p>
+        <!-- Member -->
+        <div class="member-list row">
+          <div class="mt-32 s-col-full text-center col col-third">
+            <p class="member-name mem1">None</p>
+            <img
+              src="./asset/img/Member/Blank.jpg"
+              alt="Name"
+              class="member-img mem1"
+            />
+          </div>
+          <div class="mt-32 s-col-full text-center col col-third col-center">
+            <p class="member-name mem2">Lucas</p>
+            <img
+              src="./asset/img/Member/Lucass.png"
+              alt="Name"
+              class="member-img mem2"
+            />
+          </div>
+          <div class="mt-32 s-col-full text-center col col-third">
+            <p class="member-name mem3">None</p>
+            <img
+              src="./asset/img/Member/Blank.jpg"
+              alt="Name"
+              class="member-img mem3"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Product -->
+      <div id="product" class="product-section">
         <div class="content-section">
-          <h2 class="section-heading">About US</h2>
-          <p class="section-subheading">
-            Ravion was created from a simple idea: to build something beyond the
-            ordinary.A world where adventure, challenge, and discovery never
-            truly end.
-          </p>
-          <!-- Member -->
-          <div class="member-list row">
-            <div class="text-center col col-third">
-              <p class="member-name">Name</p>
+          <h2 class="section-heading text-white">Product</h2>
+          <p class="section-subheading text-white text-center">Explore Our Products</p>
+          <ul class="ticket-list">
+            <li> <span class="coming-soon">Coming soon</span></li>
+            <li> <span class="coming-soon">Coming soon</span></li>
+            <li> <span class="remaining">0</span></li>
+          </ul>
+
+          <!-- Product-time -->
+          <div class="row product-list">
+            <div class="col col-third s-col-full mt-16">
               <img
-                src="./asset/img/bandmember.jpg"
-                alt="Name"
-                class="member-img"
+                src="./asset/img/product-update.jpg"
+                alt="Update 1.0"
+                class="product-img"
               />
+              <div class="product-body">
+                <h3 class="product-heading">Coming soon</h3>
+                <p class="product-day">Coming soon</p>
+                <p class="product-desc">Coming soon</p>
+                <button class="btn js-more s-full-width">More</button>
+              </div>
             </div>
-            <div class="text-center col col-third">
-              <p class="member-name">Name</p>
+
+            <div class="col col-third s-col-full mt-16">
               <img
-                src="./asset/img/bandmember.jpg"
-                alt="Name"
-                class="member-img"
+                src="./asset/img/product-update.jpg"
+                alt="Update 1.0"
+                class="product-img"
               />
+              <div class="product-body">
+                <h3 class="product-heading">Coming soon</h3>
+                <p class="product-day">Coming soon</p>
+                <p class="product-desc">Coming soon</p>
+                <button class="btn js-more s-full-width">More</button>
+              </div>
             </div>
-            <div class="text-center col col-third">
-              <p class="member-name">Name</p>
+
+            <div class="col col-third s-col-full mt-16">
               <img
-                src="./asset/img/bandmember.jpg"
-                alt="Name"
-                class="member-img"
+                src="./asset/img/product-update.jpg"
+                alt="Update 1.0"
+                class="product-img"
               />
+              <div class="product-body">
+                <h3 class="product-heading">Coming soon</h3>
+                <p class="product-day">Coming soon</p>
+                <p class="product-desc">Coming soon</p>
+                <button class="btn js-more s-full-width">More</button>
+              </div>
             </div>
             <div class="clear"></div>
           </div>
         </div>
-        <!-- Product -->
-        <div class="product-section">
-          <div class="content-section">
-            <h2 class="section-heading text-white">Product</h2>
-            <p class="section-subheading text-white">Explore Our Products</p>
-            <ul class="ticket-list">
-              <li>September <span class="sold-out">Sold-out</span></li>
-              <li>October <span class="sold-out">Sold-out</span></li>
-              <li>November <span class="remaining">3</span></li>
-            </ul>
+      </div>
 
-            <!-- Product-time -->
-            <div class="row product-list">
-              <div class="col col-third">
-                <img
-                  src="./asset/img/product-update.jpg"
-                  alt="Update 1.0"
-                  class="product-img"
-                />
-                <div class="product-body">
-                  <h3 class="product-heading">New York</h3>
-                  <p class="product-day">26 tháng 3 năm 2026</p>
-                  <p class="product-desc">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                  </p>
-                  <button class="product-more-btn js-more">More</button>
+      <!-- Begin Contact Section -->
+      <div id="contact" class="content-section">
+        <h2 class="section-heading">CONTACT</h2>
+        <p class="section-subheading text-center">Contact us if you need help</p>
+
+        <div class="row contact-content">
+          <div class="col s-col-full contact-info col-half">
+            <p>
+              <i class="ti-facebook"></i>
+              <a href="https://www.facebook.com/nvtd.0908/">Lucas Strowman</a>
+            </p>
+            <p class="s-mt-8">
+                <i class="ti-youtube"></i>
+              <a href="https://www.youtube.com/@lucasstrowman"
+                >Lucas Strowman</
+              >
+            </p>
+            <p><i class="ti-email s-mt-8"></i>Creatorlucass@gmail.com</p>
+          </div>
+          <div class="col col-half s-col-full contact-form">
+            <form action="">
+              <div class="row">
+                <div class="col col-half s-col-full">
+                  <input
+                    type="text"
+                    name=""
+                    placeholder="Name"
+                    id=""
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col col-half s-col-full s-mt-8">
+                  <input
+                    type="email"
+                    name=""
+                    placeholder="email"
+                    id=""
+                    class="form-control"
+                    required
+                  />
                 </div>
               </div>
-
-              <div class="col col-third">
-                <img
-                  src="./asset/img/product-update.jpg"
-                  alt="Update 1.0"
-                  class="product-img"
-                />
-                <div class="product-body">
-                  <h3 class="product-heading">New York</h3>
-                  <p class="product-day">Fri 27 Nov 2016</p>
-                  <p class="product-desc">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                  </p>
-                  <button class="product-more-btn js-more">More</button>
+              <div class="row mt-8">
+                <div class="col col-full">
+                  <input
+                    type="text"
+                    name=""
+                    placeholder="Message"
+                    id=""
+                    class="form-control"
+                    required
+                  />
                 </div>
               </div>
-
-              <div class="col col-third">
-                <img
-                  src="./asset/img/product-update.jpg"
-                  alt="Update 1.0"
-                  class="product-img"
-                />
-                <div class="product-body">
-                  <h3 class="product-heading">New York</h3>
-                  <p class="product-day">Fri 27 Nov 2016</p>
-                  <p class="product-desc">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                  </p>
-                  <button class="product-more-btn js-more">More</button>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
+              <input
+                type="submit"
+                value="Send"
+                class="btn mt-16 pull-right s-full-width"
+                required
+              />
+            </form>
           </div>
         </div>
-
-        <div class="content-section">
-          <h2 class="section-heading">CONTACT</h2>
-          <p class="section-subheading">Contact us if you need help</p>
-
-          <div class="row contact-content">
-            <div class="col col-half contact-info">
-              <p><i class="ti-facebook"></i>Lucas Strowman</p>
-              <p><i class="ti-youtube"></i>Lucas Strowman</p>
-              <p><i class="ti-email"></i>Creatorlucass@gmail.com</p>
-            </div>
-            <div class="col col-half contact-form">
-              <form action="">
-                <div class="row">
-                  <div class="col col-half">
-                    <input type="text" name="" placeholder="Name" id="" class="form-control" required>
-                    
-                  </div>
-                  <div class="col col-half">
-                    <input type="email" name="" placeholder="email" id="" class="form-control" required>
-                  </div>
-                </div>
-                <div class="row mt-8">
-                  <div class="col col-full">
-                    <input type="text" name="" placeholder="Message" id="" class="form-control" required>
-                  </div>
-                </div>
-                <input type="submit" value="Send" class="form-submit-btn mt-16" required>
-              </form>
-            </div>
-          </div>
-      <div id="footer"></div>
+      </div>
+      <!-- End Contact Section -->
+      <div id="footer">
+        <div class="social-list">
+          <a href="https://www.facebook.com/nvtd.0908/"
+            ><i class="ti-facebook"></i
+          ></a>
+          <a href="https://www.youtube.com/@lucasstrowman"
+            ><i class="ti-youtube"></i
+          ></a>
+        </div>
+        <p class="coppyright">Powered by Lucas Strowman</p>
+      </div>
     </div>
 
     <div class="modal js-modal">
@@ -191,35 +245,35 @@
         </div>
 
         <header class="modal-header">
-          <i class="modal-heading ti-bag"></i>Tickets
+          <i class="modal-heading ti-info"></i>Info update 
         </header>
 
         <div class="modal-body">
-          <label for="quantity" class="modal-label">
-            <i class="ti-shopping-cart"></i>Tickets, $15 per person
-          </label>
-          <input
+          
+            <h2>Please, wait a update from us</h2>
+          
+          <!-- <input
             type="text"
             class="modal-input"
             placeholder="How many?"
             id="quantity"
-          />
+          /> -->
 
-          <label for="modal-email" class="modal-label">
-            <i class="ti-user"></i>Send to Email
-          </label>
-          <input
+          
+            <p><i class="ti-user"></i>Update is coming soon!</p>
+          
+          <!-- <input
             type="email"
             class="modal-input"
             placeholder="enter email"
             id="modal-email"
-          />
+          /> -->
 
-          <button id="buy-ticket">Pay <i class="ti-check"></i></button>
+          <button id="ok-btn" class="js-modal-close">OK <i class="ti-check"></i></button>
         </div>
 
         <footer class="modal-footer">
-          <p class="modal-help">Need <a href="">help?</a></p>
+          <p class="modal-help">Need <a href="#contact" class="js-modal-close">help?</a></p>
         </footer>
       </div>
     </div>
@@ -227,7 +281,7 @@
     <script>
       const moreBtns = document.querySelectorAll(".js-more");
       const modal = document.querySelector(".js-modal");
-      const modalClose = document.querySelector(".js-modal-close");
+      const modalCloses = document.querySelectorAll(".js-modal-close");
       const modalContainer = document.querySelector(".js-modal-container");
 
       // Hàm thêm class open modal
@@ -235,7 +289,8 @@
         modal.classList.add("open");
       }
 
-      // Hàm xóa class opem modal
+      // Hàm xóa class open modal
+      
       function hideMoreBtns() {
         modal.classList.remove("open");
       }
@@ -249,11 +304,49 @@
         moreBtn.addEventListener("click", showMoreBtns);
       }
       //Listen click button close
-      modalClose.addEventListener("click", hideMoreBtns);
+      for (const modalClose of modalCloses) {
+        modalClose.addEventListener("click", hideMoreBtns);
+      }
 
       modal.addEventListener("click", hideMoreBtns);
 
       modalContainer.addEventListener("click", Container);
+
+      var header = document.getElementById('header');
+      var mobileMenu = document.getElementById('mobile-menus');
+      var headerHeight = header.clientHeight;
+
+
+      // Open and close mobile menu
+      mobileMenu.onclick = function () {
+        var isClose = header.clientHeight === headerHeight;
+        if (isClose) {
+          header.style.height = 'auto';
+        }
+        else {
+          header.style.height = null;
+        }
+      }
+
+      // Auto close when click menu
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      
+      for (var i = 0; i < menuItems.length; i++){
+        var menuItem = menuItems[i];
+        
+
+        console.log(menuItem.nextElementSibling);
+
+        menuItem.onclick = function () {
+          var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+          if (isParentMenu) {
+            event.preventDefault();
+          }
+          else {
+            header.style.height = null;
+          }
+        }
+      }
     </script>
   </body>
 </html>
